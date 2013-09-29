@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title> Fiscal Fitness: Interest Rates</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="application.css">  
   </head>
   <body>
@@ -43,7 +44,7 @@
           </tr>
           <tr>
             <td class="center" colspan = "2">
-            <input type=button name=button1 value="How much will you have?" onClick="javascript:CalcA()"></td>
+            <input type=button name=button1 value="How much will you have?" id="howMuch"></td>
           </tr>
           <tr>
             <td>Total Savings:</td>
@@ -58,7 +59,12 @@
       </div>
     </div>
 
-    <script src="application.js"></script>
+    <div id="chart"></div>
+
     <script src="jquery.js"></script>
+    <script src="d3.v3.js"></script>
+    <script src="d3.layout.js"></script>
+    <script src="rickshaw.js"></script>
+    <script src="application.js"></script>
   </body>
 </html>
