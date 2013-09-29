@@ -1,0 +1,96 @@
+html {
+  background: white;
+  font-family: sans-serif;
+}
+
+h1 {
+	color: blue;
+}
+
+h2 {
+	margin: 15px 0px 15px 0px;
+}
+
+p div {
+  margin: 5px 0px 5px 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* This Code Doesn't do ANYTHING!! */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bottom_right {
+  float: right;
+  margin-right: 15px;
+}
+
+.center {
+  text-align: center;
+  /* I don't think this is best practive */
+}
+
+#slide {
+	padding: 20px 5px 45px 30px;
+	margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 850px;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 20px;
+	color: inherit;
+	background-color: #eeeeee;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+  box-shadow: 1px 1px 3px #28261f;
+}
+
+#irate_graph {
+  /* Use scss to call .center here */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3/ */
+.next_button {
+  padding: 10px 15px;
+  background: #4479BA;
+  color: #FFF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px #20538D;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  text-decoration:none;     
+}
+
+.next_button:hover {
+  background: #356094;
+  border: solid 1px #2A4E77;
+  text-decoration: none;
+}
+
+.next_button:active {
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  background: #2E5481;
+  border: solid 1px #203E5F;
+}

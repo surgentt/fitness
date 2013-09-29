@@ -1,0 +1,8 @@
+Too DO!!
+
+-Fix css Center Class to work properly
+  *Currently text-align: center is not correct
+
+-Fix jquery, interest rate function, call another function within, it indicating if the amount savings in over 1 Million
+
+Create a Header and a Variable Section

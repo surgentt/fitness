@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Fiscal Fitness: Interest Rates</title>
+    <link rel="stylesheet" href="application.css">  
+  </head>
+  <body>
+    <h1>Fiscal Fitness</h1>
+    <div id="myDiv">
+     <h2>Variables</h2>
+    </div>
+    
+    <div id="slide">
+      <h2>Let's Make A Million Dollars</h2>
+      <p>
+        So within any time value of money there exists three components
+      </p>
+
+      <div>
+        Interest Rates | Number of Periods | Number of Payments
+      </div>
+      <p></p>
+
+      <div id="irate_graph">
+        <form  method=post name="calform">
+        <table border="1">
+          <tr>
+            <td>Monthly Investment:</td>
+            <td><input type=text name=payment size=13 maxlength=13></td>
+          </tr>
+          <tr>
+            <td>Number of months/years:</td>
+            <td><input type=text name=months size=6 maxlength=3>
+              <select name=period size=1>
+                <option value="y">Years
+                <option value="m">Months
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Interest rate:</td>
+            <td><input type=text name=interest size=5 maxlength=5><b> %</b></td>
+          </tr>
+          <tr>
+            <td class="center" colspan = "2">
+            <input type=button name=button1 value="How much will you have?" onClick="javascript:CalcA()"></td>
+          </tr>
+          <tr>
+            <td>Total Savings:</td>
+            <td><input type=text name=total value="0.00" size=15 maxlength=15></td>
+          </tr>
+        </table>
+        </form>
+      </div>
+
+      <div class="bottom_right">
+        <a class="next_button" href="file://localhost/Users/thomassurgent/Desktop/Fitness/fitness/4interest_rates.html">Next</a>
+      </div>
+    </div>
+
+    <script src="application.js"></script>
+    <script src="jquery.js"></script>
+  </body>
+</html>
