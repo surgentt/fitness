@@ -11,8 +11,12 @@ h2 {
 	margin: 15px 0px 15px 0px;
 }
 
-p div {
-  margin: 5px 0px 5px 0px;
+p {
+  margin: 15px 0px 15px 0px;
+}
+
+div {
+  margin: 15px 0px 15px 0px;
 }
 
 a {
@@ -26,8 +30,8 @@ a {
 }
 
 .bottom_right {
+  position: relative;
   float: right;
-  margin-right: 15px;
 }
 
 .center {
@@ -60,6 +64,7 @@ a {
 
 /* http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3/ */
 .next_button {
+  margin: 10px 10px 10px 10px;
   padding: 10px 15px;
   background: #4479BA;
   color: #FFF;
@@ -78,7 +83,7 @@ a {
   -moz-user-select:none;
   -ms-user-select:none;
   user-select:none;
-  text-decoration:none;     
+  text-decoration:none; 
 }
 
 .next_button:hover {
