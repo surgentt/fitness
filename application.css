@@ -4,11 +4,13 @@ html {
 }
 
 h1 {
-	color: blue;
+	color: green;
 }
 
 h2 {
-	margin: 15px 0px 15px 0px;
+	margin: 15px 15px 15px 0px;
+  border-bottom: 3px solid #691616;
+  padding-bottom: 3px;
 }
 
 p {
@@ -29,9 +31,27 @@ a {
   margin-left: auto;
 }
 
+#slide {
+  padding: 20px 5px 45px 30px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 850px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 20px;
+  color: inherit;
+  background-color: #eeeeee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #28261f;
+}
+
 .bottom_right {
   position: relative;
   float: right;
+  bottom: 10px;
 }
 
 .center {
@@ -39,28 +59,65 @@ a {
   /* I don't think this is best practive */
 }
 
-#slide {
-	padding: 20px 5px 45px 30px;
-	margin-bottom: 30px;
+#irate_form {
+  /* Use scss to call .center here */
+  /* Not WORKING!! */
   margin-right: auto;
   margin-left: auto;
-  max-width: 850px;
-	font-size: 18px;
-	font-weight: 200;
-	line-height: 20px;
-	color: inherit;
-	background-color: #eeeeee;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-  box-shadow: 1px 1px 3px #28261f;
 }
 
-#irate_graph {
-  /* Use scss to call .center here */
-  margin-right: auto;
-  margin-left: auto;
+/* Rickshaw Graph */
+#chart_container {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+#chart {
+  position: relative;
+  margin-right: 15px;
+}
+
+#y_axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
+
+/*http://css-tricks.com/examples/ButtonMaker/#*/
+.button {
+  border-top: 1px solid #1ab58e;
+  background: #42ab18;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1bbf20), to(#42ab18));
+  background: -webkit-linear-gradient(top, #1bbf20, #42ab18);
+  background: -moz-linear-gradient(top, #1bbf20, #42ab18);
+  background: -ms-linear-gradient(top, #1bbf20, #42ab18);
+  background: -o-linear-gradient(top, #1bbf20, #42ab18);
+  padding: 5.5px 11px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.button:hover {
+  border-top-color: #287841;
+  background: #287841;
+  color: #ccc;
+}
+.button:active {
+  border-top-color: #3a5c1b;
+  background: #3a5c1b;
+}
+
 
 /* http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3/ */
 .next_button {
@@ -99,3 +156,4 @@ a {
   background: #2E5481;
   border: solid 1px #203E5F;
 }
+

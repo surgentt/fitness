@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	 <meta charset="utf-8">
-	 <title>hello</title>
-	 <link rel="stylesheet" href="application.css">   
-</head>
-
-<body>
-	<h1>Fiscal Fitness</h1>
+  <head>
+    <title> Fiscal Fitness: Interest Rates</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="application.css">  
+  </head>
+  <body>
+    <h1>Fiscal Fitness</h1>
     <div id="myDiv">
      <h2>Variables</h2>
     </div>
     
     <div id="slide">
-      <h2>Can you Make One Million Dollars?</h2>
+      <h2>Let's Make A Million Dollars</h2>
       <p>
         So within any time value of money there exists three components
       </p>
@@ -24,15 +23,15 @@
       <p></p>
 
       <div id="irate_graph">
-        <form  method=post name=iRateForm>
+        <form  method=post name="calform">
         <table border="1">
           <tr>
-            <td>Monthly Payment:</td>
-            <td><input type=text name=pmt size=13 maxlength=13></td>
+            <td>Monthly Investment:</td>
+            <td><input type=text name=payment size=13 maxlength=13></td>
           </tr>
           <tr>
-            <td>Length of Monthly Investment:</td>
-            <td><input type=text name=numOfPeriods size=6 maxlength=3>
+            <td>Number of months/years:</td>
+            <td><input type=text name=months size=6 maxlength=3>
               <select name=period size=1>
                 <option value="y">Years
                 <option value="m">Months
@@ -40,7 +39,7 @@
             </td>
           </tr>
           <tr>
-            <td>Interest Rate:</td>
+            <td>Interest rate:</td>
             <td><input type=text name=interest size=5 maxlength=5><b> %</b></td>
           </tr>
           <tr>
@@ -62,13 +61,10 @@
 
     <div id="chart"></div>
 
-    <!--<script src="jquery.js"></script>-->
     <script src="jquery.js"></script>
     <script src="d3.v3.js"></script>
     <script src="d3.layout.js"></script>
     <script src="rickshaw.js"></script>
-    <script src="tvm.js"></script>
-
+    <script src="application.js"></script>
   </body>
 </html>
-</body>

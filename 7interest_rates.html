@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <title> Fiscal Fitness: Interest Rates Cost</title>
     <link rel="stylesheet" href="application.css">  
   </head>
   <body>
     <h1>Fiscal Fitness</h1>
-    <div id="myDiv">
-     <h2>Variables</h2>
-    </div>
     
     <div id="slide">
       <h2>What will Interest Rates COST you?</h2>
       <p>
-        Now, Unfortunately for you, individual borrowers are much less likely to pay off their debts. Therefore are interest rates going to be . . . 
+        Now, Unfortunately for you, individual borrowers are much less likely to pay off their debts. Therefore interest rates going to be . . . 
       </p> 
 
-      <div>BUTTON Higher or Lower</div>
+      <div class="button" id="Higher">
+        Higher 
+      </div>
+      <div class="button" id="Lower">
+        Lower
+      </div>
 
       <p> 
         Now remember these are some of the costs you could expect to pay.
@@ -48,7 +51,7 @@
       </div>
     </div>
 
-    <script src="application.js"></script>
     <script src="jquery.js"></script>
+    <script src="tvm7.js"></script>
   </body>
 </html>
