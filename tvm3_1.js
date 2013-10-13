@@ -13,14 +13,14 @@ $(document).ready(function(){
 		} else {
 			//Must Trun First
       numOfPeriods = yearToMonthAdj();
-      console.log(numOfPeriods);
-			runFvNoInterest(numOfPeriods);
 			createiRateGraphNoInterest(numOfPeriods);
+      testFVforMillionaire();
  		}						
   });
 
   function yearToMonthAdj() {
 			//Adjust the num of years to Monthly PMT
+      //$('#iRateForm').val() === 'Years'
     if(document.iRateForm.yearOrMonth.options[0].selected == true) {
       //Multiply the value by 12
       return document.iRateForm.numOfPeriods.value * 12;
@@ -37,7 +37,8 @@ $(document).ready(function(){
     //When Initital Run, numOfPeriods is passed in. 
     futureValue = document.iRateForm.pmt.value*numOfPeriods;
     
-    futureValueString = String(futureValue);
+    
+    futureValueString = futureValue.formatMoney(2);
     document.iRateForm.total.value = "$" + futureValueString;
     
     return futureValue;
@@ -64,17 +65,28 @@ $(document).ready(function(){
         }]
       });
 
-      //var x_axes = new Rickshaw.Graph.Axis.Time( { 
-      //  graph: graph,
-      //});
+      var x_axes = new Rickshaw.Graph.Axis.Time( { 
+        graph: graph,
+      });
       //Render the graph
       graph.render();
+  }
 
+  function testFVforMillionaire() {
+    var finalFV = document.iRateForm.total.value;
+    finalFV = finalFV.substr(1,30);
+    finalFV = parseInt(finalFV);
+    if (finalFV > 1000000) {
+      alert("Great Job");
+    } else {
+      alert("You should save some more");
+    }
   }
 
 });
 
 //Too Doo!! 
+  //Should I be using document.getElementById Instead??
   //Insert "," into final answer
   //Create Axis for Graph
   //Reposition Graph to Center of Page

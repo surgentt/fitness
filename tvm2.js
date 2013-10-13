@@ -13,7 +13,7 @@ $(document).ready(function(){
 	});
 
 	$("#aDollarTomorrow").click(function() {
-		alert("Great thanks for fiving me free Interest");
+		alert("Great thanks for giving me free Interest");
 	});
 
 });

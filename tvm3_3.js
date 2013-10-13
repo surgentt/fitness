@@ -12,7 +12,6 @@ $(document).ready(function(){
       alert("Please fill in all of the required fields.")
     } else {
       numOfPeriods = yearToMonthAdj();
-      //runFVOrdinaryAnnuity(numOfPeriods);
       createiRateGraph(numOfPeriods);
     }           
   });
@@ -55,9 +54,7 @@ $(document).ready(function(){
     futureValue = document.iRateForm.pmt.value * factor;
 
     //On First run output the result to DOM
-      //Find the location of the decimal Point
-    decimal = String(futureValue).indexOf(".");
-    futureValueString = String(futureValue).substring(0,(decimal+3));
+    futureValueString = futureValue.formatMoney(2);
     document.iRateForm.total.value = "$" + futureValueString;    
     
     return futureValue;
@@ -96,3 +93,6 @@ $(document).ready(function(){
   }
 
 });
+
+//Too doo
+  // Get ths graph looking correct

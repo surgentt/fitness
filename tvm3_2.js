@@ -1,11 +1,3 @@
-//Too Doo!! 
-  //Make my formula run as quickly as possible
-
-  //Insert "," into final answer
-  //Create Axis for Graph
-  //Reposition Graph to Center of Page
-  //Create Alert with CSS blur, if Savings are over $1 Million
-
 $(document).ready(function(){
 
   console.log(d3);
@@ -20,8 +12,8 @@ $(document).ready(function(){
       alert("Please fill in all of the required fields.")
     } else {
       numOfPeriods = yearToMonthAdj();
-      runFVOrdinaryAnnuity(numOfPeriods);
       createiRateGraph(numOfPeriods);
+      testFVforMillionaire();
     }           
   });
 
@@ -50,8 +42,7 @@ $(document).ready(function(){
 
     //On First run output the result to DOM
       //Find the location of the decimal Point
-    decimal = String(futureValue).indexOf(".");
-    futureValueString = String(futureValue).substring(0,(decimal+3));
+    futureValueString = futureValue.formatMoney(2);
     document.iRateForm.total.value = "$" + futureValueString;    
     
     return futureValue;
@@ -82,4 +73,23 @@ $(document).ready(function(){
       graph.render();
   }
 
+  function testFVforMillionaire() {
+    var finalFV = document.iRateForm.total.value;
+    finalFV = finalFV.substr(1,30);
+    finalFV = parseInt(finalFV);
+    if (finalFV > 1000000) {
+      alert("Wow, wasn't that way easier with Interest");
+    } else {
+      alert("Save some more money for that Big Vacation you want to take");
+    }
+  }
+
 });
+
+//Too Doo!! 
+  //Make my formula run as quickly as possible
+
+  //Insert "," into final answer
+  //Create Axis for Graph
+  //Reposition Graph to Center of Page
+  //Create Alert with CSS blur, if Savings are over $1 Million
