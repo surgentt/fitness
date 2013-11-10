@@ -3,7 +3,8 @@
 <head>
    <meta charset="utf-8">
    <title>Fiscal Fitness: Interest Rates</title>
-   <link rel="stylesheet" href="application.css">   
+   <link rel="stylesheet" href="application.css">
+   <link rel="stylesheet" href="rickshaw.min.css">
 </head>
 
 <body>
@@ -17,16 +18,16 @@
       </p>
 
       <div id="irate_form">
-        <form  method=post name=iRateForm>
+        <form  method=post id="iRateForm">
         <table border="1">
           <tr>
             <td>Monthly Savings Contribution:</td>
-            <td><input type=text name=pmt size=13 maxlength=13></td>
+            <td><input class="required" id="pmt" type=text size=13 maxlength=13></td>
           </tr>
           <tr>
             <td>Length of Monthly Investments:</td>
-            <td><input type=text name=numOfPeriods size=6 maxlength=3>
-              <select name=yearOrMonth size=1>
+            <td><input class="required" id="numOfPeriods" type=text name=numOfPeriods size=6 maxlength=3>
+              <select id="yearOrMonth" size=1>
                 <option value="y">Years
                 <option value="m">Months
               </select>
@@ -34,20 +35,24 @@
           </tr>
           <tr>
             <td class="center" colspan = "2">
-              <div class="button" id="howMuch">
-                How much will you Save?
-              </div>
+              <button class="button" id="howMuch">
+                How much will you save?
+              </button>
             </td>
           </tr>
           <tr>
             <td>Total Savings:</td>
-            <td><input type=text name=total value="0.00" size=15 maxlength=15></td>
+            <td><input id="total" type=text value="0.00" size=15 maxlength=15></td>
           </tr>
         </table>
         </form>
       </div>
 
-      <div id="chart"></div>
+      <div id="chart_container">
+        <div id="chart"></div>
+        <div id="x_axis"></div>
+        <div id="y_axis"></div>
+      </div>
 
       <div class="bottom_right">
         <a class="next_button" href="3_2interest_rates.html">Next</a>
@@ -59,6 +64,7 @@
     <script src="d3.layout.js"></script>
     <script src="rickshaw.js"></script>
     <script src="application.js"></script>
+    <script src="graph.js"></script>
     <script src="tvm3_1.js"></script>
 
   </body>

@@ -70,6 +70,7 @@ $(document).ready(function(){
       });
 
       //Render the graph
+
       graph.render();
   }
 
