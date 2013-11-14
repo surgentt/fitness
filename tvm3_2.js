@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     //Validates for empty code only. 
     if(document.iRateForm.pmt.value==="" || document.iRateForm.numOfPeriods.value==="" || document.iRateForm.interest.value==="") {
-      alert("Please fill in all of the required fields.")
+      alert("Please fill in all of the required fields.");
     } else {
       numOfPeriods = yearToMonthAdj();
       createiRateGraph(numOfPeriods);

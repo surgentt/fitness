@@ -168,4 +168,126 @@ input {
   border: solid 1px #203E5F;
 }
 
+/*///////////*/
+/* Modal CSS */
+/*///////////*/
+
+/* http://blog.avtex.com/2012/01/26/cross-browser-css-only-modal-box/ */
+
+#content_help_button {
+  position: fixed;
+  z-index: 1000;
+  background-color: #000;
+  background-image: url("/assetscontent_help_5.png");
+  left: 0;
+  top: 120px;
+  width: 23px;
+  height: 73px;
+}
+
+#technical_assistance_button {
+  position: fixed;
+  z-index: 1000;
+  background-color: #000;
+  background-image: url("/assetstechnical_assistance_5.png");
+  left: 0;
+  top: 200px;
+  width: 23px;
+  height: 123px;
+}
+
+.dumbBoxWrap { /* The dic that shows/hides */
+  display: none; /* Start out hiddden */
+  z-index: 4001; /* high z-index */
+}
+
+.vertical-offset {
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  z-index:4002;
+}
+
+.dumbBox {
+  width: 600px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid black;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+  background-clip: padding-box;
+}
+
+.modal-header {
+  padding: 8px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  filter: alpha(opacity=20);
+}
+
+.modal-body {
+  padding: 5px 20px 5px 20px;
+}
+
+textarea#feedback, textarea#content_help {
+  width: 550px;
+  height: 60px;
+}
+
+.modal-footer {
+  padding: 10px 20px 10px 10px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
 

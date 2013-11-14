@@ -1,5 +1,27 @@
 $(document).ready(function(){
 
+	//////////////
+	//Test Modal//
+	//////////////
+
+	$(".contentHelpButton").click(function() {
+		$('.content_helpModal').show();
+	});
+
+	$(".technicalAssistanceButton").click(function() {
+		$('#technical_assistanceModal').show();
+	});
+
+	$(".close").click(function() {
+		$('.content_helpModal').hide();
+		$('#content_helpModal').hide();
+	});
+
+	$(".assistance").click(function() {
+		$('.content_helpModal').hide();
+		$('#content_helpModal').hide();
+	});
+
 	/////////////////////////
 	//Answer's to Questions//
 	/////////////////////////
