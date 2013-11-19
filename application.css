@@ -36,7 +36,7 @@ a {
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  width: 850px;
+  max-width: 850px;
   font-size: 18px;
   font-weight: 200;
   line-height: 20px;
