@@ -1,60 +1,59 @@
 $(document).ready(function(){
 
-	//////////////
-	//Test Modal//
-	//////////////
+	/////////////////////
+	//Application Wide //
+	/////////////////////
 
-	$(".contentHelpButton").click(function() {
-		$('.content_helpModal').show();
-	});
-
-	$(".technicalAssistanceButton").click(function() {
-		$('#technical_assistanceModal').show();
-	});
-
-	$(".close").click(function() {
-		$('.content_helpModal').hide();
-		$('#content_helpModal').hide();
-	});
-
-	$(".assistance").click(function() {
-		$('.content_helpModal').hide();
-		$('#content_helpModal').hide();
-	});
+	$('#slide').hide().fadeIn(500);
 
 	/////////////////////////
 	//Answer's to Questions//
 	/////////////////////////
 
-	// All Slides Appear on the Page
-	$('#slide').hide().fadeIn(500);
-
 	//Slide 2 Questions
 	$("#20today").click(function() {
-		alert("You didn't earn any interest");
+		$('.modal').show();
+		$('.dumbBox').css("background-color","#FF2621");
+		$('.modal_content').text('Thank you for the free interest.');
 	});
 
 	$("#25twoWeeks").click(function() {
-		alert("This represents an interest rate of 20% per Year");
+		$('.modal').show();
+		$('.dumbBox').css("background-color","#40E50D");
+		$('.modal_content').text('This represents an interest rate of 20% per Year');
 	});
 
 	$("#aDollarToday").click(function() {
-		alert("That was Easy");
+		$('.modal').show();
+		$('.modal_content').text('That was Easy');
 	});
 
 	$("#aDollarTomorrow").click(function() {
-		alert("Great thanks for giving me free Interest");
+		$('.modal').show();
+		$('.modal_content').text('You\'re not very smart');
 	});
 
 	//Slide 4 & Slide 7
 	$("#Higher").click(function() {
-		alert("Correct");
-	});
-	$("#Lower").click(function() {
-		alert("Incorrect");
+		$('.modal').show();
+		$('.modal_content').text('Correct');
 	});
 
-	//Helper Method to format money
+	$("#Lower").click(function() {
+		$('.modal').show();
+		$('.modal_content').text('Incorrect');
+	});
+
+	//Close Any Modal
+	$('.close').click(function() {
+		$('.dumbBox').css("background-color","#fff");
+		$('.modal').hide();
+	});
+
+	/////////////////////////////////
+	//Helper Method to format money//
+	/////////////////////////////////
+
 	Number.prototype.formatMoney = function(c, d, t){
   	var n = this, 
     c = isNaN(c = Math.abs(c)) ? 2 : c, 

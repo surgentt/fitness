@@ -1,10 +1,14 @@
+/*///////////////////*/
+/* Sensible Defaults */
+/*///////////////////*/
+
 html {
   background: white;
   font-family: sans-serif;
 }
 
 h1 {
-	color: red;
+	color: green;
 }
 
 h2 {
@@ -26,22 +30,13 @@ a {
   text-decoration: none;
 }
 
-input {
-
-}
-
-/* This Code Doesn't do ANYTHING!! */
-.container {
-  margin-right: auto;
-  margin-left: auto;
-}
 
 #slide {
   padding: 20px 5px 45px 30px;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 850px;
+  width: 850px;
   font-size: 18px;
   font-weight: 200;
   line-height: 20px;
@@ -54,22 +49,35 @@ input {
   position: relative;
 }
 
+/*/////////*/
+/*Positions*/
+/*/////////*/
+.center {
+  text-align: center;
+}
+
 .bottom_right {
   position: relative;
   float: right;
-  bottom: 10px;
+  right: 6px;
+  bottom: 8px;
 }
 
-.center {
-  text-align: center;
-  /* I don't think this is best practive */
+.bottom_left {
+  position: relative;
+  float: left;
+  right: 6px;
+  bottom: 8px;
 }
 
 #irate_form {
   margin-left: 30px;
 }
 
+/*////////////////*/
 /* Rickshaw Graph */
+/*////////////////*/
+
 #chart_container {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
@@ -79,20 +87,27 @@ input {
 
 #chart {
   position: relative;
+  margin: 20px 20px 20px 20px;
 }
 
 #y_axis {
   position: absolute;
-  left: -2px;
-  bottom: -4px;
+  left: -25px;
+  bottom: 1px;
 }
 
 #x_axis {
   position: absolute;
-  bottom: -5px;
+  bottom: 2px;
+  left: 50px;
 }
 
+/*/////////*/
+/* Buttons */
+/*/////////*/
+
 /*http://css-tricks.com/examples/ButtonMaker/#*/
+
 .button {
   border-top: 1px solid #1ab58e;
   border-bottom: none;
@@ -129,72 +144,11 @@ input {
   background: #3a5c1b;
 }
 
-
-/* http://www.usabilitypost.com/2012/01/10/pressed-button-state-with-css3/ */
-.next_button {
-  margin: 10px 10px 10px 10px;
-  padding: 10px 15px;
-  background: #4479BA;
-  color: #FFF;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: solid 1px #20538D;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  text-decoration:none; 
-}
-
-.next_button:hover {
-  background: #356094;
-  border: solid 1px #2A4E77;
-  text-decoration: none;
-}
-
-.next_button:active {
-  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-  background: #2E5481;
-  border: solid 1px #203E5F;
-}
-
 /*///////////*/
 /* Modal CSS */
 /*///////////*/
 
 /* http://blog.avtex.com/2012/01/26/cross-browser-css-only-modal-box/ */
-
-#content_help_button {
-  position: fixed;
-  z-index: 1000;
-  background-color: #000;
-  background-image: url("/assetscontent_help_5.png");
-  left: 0;
-  top: 120px;
-  width: 23px;
-  height: 73px;
-}
-
-#technical_assistance_button {
-  position: fixed;
-  z-index: 1000;
-  background-color: #000;
-  background-image: url("/assetstechnical_assistance_5.png");
-  left: 0;
-  top: 200px;
-  width: 23px;
-  height: 123px;
-}
 
 .dumbBoxWrap { /* The dic that shows/hides */
   display: none; /* Start out hiddden */
@@ -203,13 +157,13 @@ input {
 
 .vertical-offset {
   position: fixed;
-  top: 10%;
+  top: 30%;
   width: 100%;
   z-index:4002;
 }
 
 .dumbBox {
-  width: 600px;
+  max-width: 300px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -225,69 +179,28 @@ input {
   background-clip: padding-box;
 }
 
-.modal-header {
-  padding: 8px;
-  border-bottom: 1px solid #e5e5e5;
+.modal_content {
+  padding: 4px 10px 4px 10px;
+  text-align: center;
 }
 
-button.close {
-  padding: 0;
+.close {
+  padding: 6px 6px 4px 0;
   cursor: pointer;
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-}
-
-.close {
   float: right;
   font-size: 21px;
   font-weight: bold;
-  line-height: 1;
+  line-height: .5;
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .2;
   filter: alpha(opacity=20);
 }
 
-.modal-body {
-  padding: 5px 20px 5px 20px;
-}
 
-textarea#feedback, textarea#content_help {
-  width: 550px;
-  height: 60px;
-}
 
-.modal-footer {
-  padding: 10px 20px 10px 10px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
-}
 
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.428571429;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #428bca;
-  border-color: #357ebd;
-}
 

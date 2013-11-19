@@ -6,7 +6,7 @@
    <link rel="stylesheet" href="application.css">   
 </head>
 
-<body>
+<body class="with">
   <h1>Fiscal Fitness</h1>
     
     <div id="slide">
@@ -37,9 +37,9 @@
           </tr>
           <tr>
             <td class="center" colspan = "2">
-              <div class="button" id="howMuch">
+              <button class="button" id="howMuch">
                 How much will you Save?
-              </div>
+              </button>
             </td>
           </tr>
           <tr>
@@ -52,8 +52,23 @@
 
       <div id="chart"></div>
 
+      <div class="bottom_left">
+        <a class="button" href="3_2interest_rates.html">Back</a>
+      </div>
+
       <div class="bottom_right">
-        <a class="next_button" href="4interest_rates.html">Next</a>
+        <a class="button" href="4interest_rates.html">Next</a>
+      </div>
+    </div>
+
+    <div class="dumbBoxWrap modal">
+      <div class="vertical-offset">
+        <div class="dumbBox">
+          <button type="button" class="close">×</button>
+          <div class="modal_content">
+            Please enable jQuery
+          </div>
+        </div>
       </div>
     </div>
 
