@@ -13,24 +13,24 @@ $(document).ready(function(){
 	//Slide 2 Questions
 	$("#20today").click(function() {
 		$('.modal').show();
-		$('.dumbBox').css("background-color","#FF2621");
-		$('.modal_content').text('Thank you for the free interest.');
+		//$('.dumbBox').css("background-color","#FF2621");
+		$('.modal_content').text('You didn\'t earn any interest.');
 	});
 
 	$("#25twoWeeks").click(function() {
 		$('.modal').show();
-		$('.dumbBox').css("background-color","#40E50D");
+		//$('.dumbBox').css("background-color","#40E50D");
 		$('.modal_content').text('This represents an interest rate of 20% per Year');
 	});
 
 	$("#aDollarToday").click(function() {
 		$('.modal').show();
-		$('.modal_content').text('That was Easy');
+		$('.modal_content').text('Sure who wouldn\'t');
 	});
 
 	$("#aDollarTomorrow").click(function() {
 		$('.modal').show();
-		$('.modal_content').text('You\'re not very smart');
+		$('.modal_content').text('That doesn\'t make much sense.');
 	});
 
 	//Slide 4 & Slide 7

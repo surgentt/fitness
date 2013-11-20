@@ -22,17 +22,21 @@ p {
   margin: 15px 0px 15px 0px;
 }
 
-div {
-  margin: 15px 0px 15px 0px;
+input {
+  text-align: right;
 }
 
 a {
   text-decoration: none;
 }
 
+table {
+  margin: 15px 0px 15px 0px;
+}
+
 
 #slide {
-  padding: 20px 5px 45px 30px;
+  padding: 20px 30px 45px 30px;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -49,9 +53,10 @@ a {
   position: relative;
 }
 
-/*/////////*/
-/*Positions*/
-/*/////////*/
+/*///////////*/
+/*Positioning*/
+/*///////////*/
+
 .center {
   text-align: center;
 }
@@ -60,46 +65,58 @@ a {
   position: relative;
   float: right;
   right: 6px;
-  bottom: 8px;
+  bottom: -8px;
 }
 
 .bottom_left {
   position: relative;
   float: left;
   right: 6px;
-  bottom: 8px;
+  bottom: -8px;
 }
 
 #irate_form {
-  margin-left: 30px;
+  margin: 0 auto;
+  width: 480px;
 }
 
 /*////////////////*/
 /* Rickshaw Graph */
 /*////////////////*/
 
+/* Center the chart */
 #chart_container {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
-  padding: 0 15px 25px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 500px;
+  height: 240px;
 }
 
 #chart {
   position: relative;
-  margin: 20px 20px 20px 20px;
 }
 
 #y_axis {
   position: absolute;
-  left: -25px;
-  bottom: 1px;
+  left: -56px;
+  bottom: 5px;
 }
 
 #x_axis {
   position: absolute;
-  bottom: 2px;
-  left: 50px;
+  bottom: 0px;
+}
+
+#legend {
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 10px;
+  top: 10px;
 }
 
 /*/////////*/
@@ -181,6 +198,7 @@ a {
 
 .modal_content {
   padding: 4px 10px 4px 10px;
+  margin: 15px 0 15px 0;
   text-align: center;
 }
 

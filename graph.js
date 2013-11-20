@@ -31,13 +31,15 @@ $(document).ready(function(){
     // Change function that is run, depending on what the body of the page is named
     if($('body.withoutInterest')[0]) {
       var futureValue = createiRateGraphNoInterest(numOfPeriods);
+      testFVforMillionaire(futureValue);
     } else if ($('body.withInterest')[0]) {
       var futureValue = createiRateGraph(numOfPeriods);
+      testFVforEarnings(futureValue);
     } else if ($('body.bothInterest')[0]) {
       var futureValue = createBoth(numOfPeriods);
+      testExtraIncome(extraIncome);
     }
 
-    testFVforMillionaire(futureValue);
   });
 
   function clearGraph() {
@@ -96,9 +98,11 @@ $(document).ready(function(){
     var graph = new Rickshaw.Graph( {
       element: document.querySelector("#chart"), 
       //Automatically Scale to window size
+      width: 500,
+      height: 210,
       series: [{
+        name:  'Total Savings',
         color: 'steelblue',
-        name:  'total savings',
         data: data
       }]
     });
@@ -140,9 +144,11 @@ $(document).ready(function(){
     var graph = new Rickshaw.Graph( {
       element: document.querySelector("#chart"), 
       //Automatically Scale to Window Size
+      width: 500,
+      height: 210,
       series: [{
-        color: 'steelblue',
-        name:  'total savings',
+        name: 'Savings with Interest',
+        color: 'lightblue',
         data: data
       }]
     });
@@ -175,7 +181,6 @@ $(document).ready(function(){
     var pmt = $('#pmt').val()
 
     for(var index = 0; index <= numOfPeriods; index++) {
-      //Instead of passing in numOfPeriods, index is passed into runFvNoInterest)
       futureValueA = runFvNoInterest(index, pmt);
       dataA.push({ x: index, y: futureValueA });
 
@@ -187,13 +192,18 @@ $(document).ready(function(){
     console.log(dataB);
     // Create a new Rickshaw Graph
     var graph = new Rickshaw.Graph( {
+      //Automatically Scale to Window Size
+      width: 500,
+      height: 210,
       element: document.querySelector("#chart"), 
       renderer: 'area',
       stroke: true,
       series: [ {
+        name: "No Interest",
         data: dataA,
         color: 'steelblue',
       }, {    
+        name: "Interest",
         data: dataB,
         color: 'lightblue',
       } ]    
@@ -211,14 +221,31 @@ $(document).ready(function(){
       element: document.getElementById('y_axis'),
     });
 
+    //var legend = new Rickshaw.Graph.Legend( {
+    //    element: document.querySelector('#legend'),
+    //    graph: graph
+    //});
+
     graph.render();
 
     // We look for the total savings of just the Future Value of B
-    futureValueString = "$" + futureValueB.formatMoney(2);
-    $('#total').val(futureValueString);
+    futureValueInterestString = "$" + futureValueB.formatMoney(2);
+    $('#totalInterest').val(futureValueInterestString);
 
-    return futureValueB;
+    futureValueNoInterestString = "$" + futureValueA.formatMoney(2);
+    $('#totalNoInterest').val(futureValueNoInterestString);
+
+    extraIncome = futureValueB - futureValueA
+    differenceString = "$" + (extraIncome).formatMoney(2);
+    $('#difference').val(differenceString);
+
+    return extraIncome;
   }
+
+  ///////////////////////////////////
+  //Results of the Exercies / Goal //
+  ///////////////////////////////////
+
 
   function testFVforMillionaire(futureValue) {
     if (futureValue > 1000000) {
@@ -229,5 +256,26 @@ $(document).ready(function(){
       $('.modal_content').text('Try and Save More');
     }
   }
+
+  function testFVforEarnings(futureValue) {
+    if (futureValue > 1000000) {
+      $('.modal').show();
+      $('.modal_content').text('Your a Millionaire. Did you see how much easier that was with interest rates?');
+    } else {
+      $('.modal').show();
+      $('.modal_content').text('Try and Save More');
+    }
+  }
+
+  function testExtraIncome(extraIncome) {
+    if (extraIncome > 100000) {
+      $('.modal').show();
+      $('.modal_content').text('You just saved over $100,000 extra dollars through the power of interest rates');
+    } else {
+      $('.modal').show();
+      $('.modal_content').text('Keep trying');
+    }
+  }
+
 
 });
