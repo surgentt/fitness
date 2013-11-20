@@ -20,7 +20,7 @@ $(document).ready(function(){
 	$("#25twoWeeks").click(function() {
 		$('.modal').show();
 		//$('.dumbBox').css("background-color","#40E50D");
-		$('.modal_content').text('This represents an interest rate of 20% per Year');
+		$('.modal_content').text('Thank you for the free interest rate');
 	});
 
 	$("#aDollarToday").click(function() {

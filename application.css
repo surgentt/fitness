@@ -111,6 +111,15 @@ table {
   bottom: 0px;
 }
 
+.x_tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dotted rgba(0,0,0,.2);
+  pointer-events: none;
+}
+
 #legend {
   position: absolute;
   display: inline-block;
