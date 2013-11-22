@@ -250,10 +250,10 @@ $(document).ready(function(){
   function testFVforMillionaire(futureValue) {
     if (futureValue > 1000000) {
       $('.modal').show();
-      $('.modal_content').text('Your a Millionaire, but wan\'t that pretty hard');
+      $('.modal_content').text('Your a Millionaire, but wasn\'t that pretty hard');
     } else {
       $('.modal').show();
-      $('.modal_content').text('Try and Save More');
+      $('.modal_content').text('Keeping trying, you\'re not a millionaire yet');
     }
   }
 
@@ -270,10 +270,11 @@ $(document).ready(function(){
   function testExtraIncome(extraIncome) {
     if (extraIncome > 100000) {
       $('.modal').show();
-      $('.modal_content').text('You just saved over $100,000 extra dollars through the power of interest rates');
+      $('.modal_content').text('You just saved ' + differenceString + ' Extra Income through the power of interest rates. Seems Awesome right.');
     } else {
       $('.modal').show();
-      $('.modal_content').text('Keep trying');
+      $('.modal_content').text('Keep trying you only earned '+ differenceString + 
+        ' in extra income');
     }
   }
 

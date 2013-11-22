@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="utf-8">
-   <title>Fiscal Fitness: Interest Rates</title>
-   <link rel="stylesheet" href="application.css">
-   <link rel="stylesheet" href="rickshaw.min.css"> 
-</head>
-
-<body class="withInterest">
-  <h1>Fiscal Fitness</h1>
+  <head>
+    <meta charset="utf-8">
+    <title> Fiscal Fitness: Interest Rates Cost</title>
+    <link rel="stylesheet" href="application.css"> 
+    <link rel="stylesheet" href="rickshaw.min.css">  
+  </head>
+  <body class="bothInterest">
+    <h1>Fiscal Fitness</h1>
     
     <div id="slide">
-      <h2>Can you Save One Million Dollars with Interest?</h2>
+      <h2>What will Interest Rates COST you?</h2>
 
       <p>
-        In the Time Value of Money equation there always exists three components:
+        Honestly, we here at Fiscal Fitness don't think we can make you a millionaire. We can, however, give you the knowledge to defend yourself against predatory leanders and stop making the rich richer.
       </p>
-      <p class="center">
-        Interest Rates | Number of Periods | Number of Payments
-      </p>
+
       <p>
-        Let's give the previous example another attempt, but this time you get to use the power of interest rates. 
+        Let's take a looks at some common interest rate expenses you are likely to pay in your life. Notice, how these rates are all higher than the interest rates an indivdual is expected to earn.
       </p>
+
+      <p>
+        Click on each empty cell to reveal an approximate interest rate and then watch the graph populate.
+      </p>
+
+      <table class="approx_irates">
+        <tr>
+          <th>Mortgage</th>
+          <th>Auto Loans</th>
+          <th>Student Loans</th>
+          <th>Credit Card Debt</th>
+          <th>Question 1</th>
+        </tr>
+        <tr>
+          <td>4.39%</td>
+          <td>3.00%</td>
+          <td>3.90%</td>
+          <td>14.95%</td>
+          <td>25%</td>
+        </tr>
+      </table>
+
 
       <div id="irate_form">
         <form  method=post id="iRateForm">
@@ -41,19 +60,31 @@
           </tr>
           <tr>
             <td>Interest Rate:</td>
-            <td><input class="required" id="interest" type=text size=6 maxlength=5><b> %</b></td>
+            <td><input class="required" type=text id="interest" size=6 maxlength=5><b> %</b></td>
           </tr>
           <tr>
             <td class="center" colspan = "2">
               <button class="button" id="howMuch">
-                How much will you Save?
+                How much can Interest Rates COST you?
               </button>
             </td>
           </tr>
           <tr>
-            <td>Total Savings:</td>
+            <td>Total Cost with Interest:</td>
             <td>
-              <input id="total" type=text name=total value="0.00" size=15 maxlength=15>
+              <input id="totalInterest" type=text name=total value="0.00" size=20>
+            </td>
+          </tr>
+          <tr>
+            <td>Total Cost with out Interest:</td>
+            <td>
+              <input id="totalNoInterest" type=text name=total value="0.00" size=20>
+            </td>
+          </tr>
+          <tr>
+            <td>Extra Expense:</td>
+            <td>
+              <input id="difference" type=text name=total value="0.00" size=20>
             </td>
           </tr>
         </table>
@@ -66,20 +97,19 @@
           <svg height="48" width="605" class="rickshaw_graph x_axis_d3" style="position: relative; left: -27px;"><g class="x_ticks_d3 plain" transform="translate(27,48)"><g class="tick" transform="translate(0,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">0</text></g><g class="tick" transform="translate(83.33333333333333,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">20</text></g><g class="tick" transform="translate(166.66666666666666,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">40</text></g><g class="tick" transform="translate(250,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">60</text></g><g class="tick" transform="translate(333.3333333333333,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">80</text></g><g class="tick" transform="translate(416.6666666666667,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">100</text></g><g class="tick" transform="translate(500,0)" style="opacity: 1;"><line y2="-4" x2="0"></line><text y="-7" x="0" dy="0em" style="text-anchor: middle;">120</text></g><path class="domain" d="M0,-4V0H500V-4"></path></g></svg>
         </div>
         <div id="y_axis">
-          <svg class="rickshaw_graph y_axis" width="50" height="231.00000000000003" style="position: relative; top: -21px;"><g class="y_ticks plain" transform="translate(50, 21)"><g class="tick" transform="translate(0,210)" style="opacity: 1;"><line x2="-4" y2="0"></line><text x="-7" y="0" dy=".32em" style="text-anchor: end;"></text></g><g class="tick" transform="translate(0,97.22051985511527)" style="opacity: 1;"><line x2="-4" y2="0"></line><text x="-7" y="0" dy=".32em" style="text-anchor: end;">100K</text></g><path class="domain" d="M-4,0H0V210H-4"></path></g></svg>        
+          <svg class="rickshaw_graph y_axis" width="50" height="231.00000000000003" style="position: relative; top: -21px;"><g class="y_ticks plain" transform="translate(50, 21)"><g class="tick" transform="translate(0,210)" style="opacity: 1;"><line x2="-4" y2="0"></line><text x="-7" y="0" dy=".32em" style="text-anchor: end;"></text></g><g class="tick" transform="translate(0,97.22051985511527)" style="opacity: 1;"><line x2="-4" y2="0"></line><text x="-7" y="0" dy=".32em" style="text-anchor: end;">100K</text></g><path class="domain" d="M-4,0H0V210H-4"></path></g></svg> 
         </div>
         <div id="legend" class="rickshaw_legend">
-          <ul><li class="line"><div class="swatch" style="background-color: rgb(173, 216, 230);"></div><span class="label">Savings with Interest</span></li></ul>
+          <ul><li class="line"><div class="swatch" style="background-color: rgb(173, 216, 230);"></div><span class="label">Expense with Interest</span></li><li class="line"><div class="swatch" style="background-color: rgb(70, 130, 180);"></div><span class="label">Expense Without Interest</span></li></ul>
         </div>
       </div>
 
-
       <div class="bottom_left">
-        <a class="button" href="3_1interest_rates.html">Back</a>
+        <a class="button" href="7_1interest_rates.html">Back</a>
       </div>
 
       <div class="bottom_right">
-        <a class="button" href="3_3interest_rates.html">Next</a>
+        <a class="button" href="8interest_rates.html">Next</a>
       </div>
     </div>
 
@@ -100,7 +130,5 @@
     <script src="rickshaw.js"></script>
     <script src="application.js"></script>
     <script src="graph.js"></script>
-
   </body>
 </html>
-</body>

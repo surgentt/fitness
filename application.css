@@ -32,14 +32,19 @@ a {
 
 table {
   margin: 15px 0px 15px 0px;
+  border: 1px solid black;
+}
+
+table td, th {
+  border: 1px solid black;
 }
 
 
 #slide {
   padding: 20px 30px 45px 30px;
   margin-bottom: 30px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   max-width: 850px;
   font-size: 18px;
   font-weight: 200;
@@ -51,6 +56,21 @@ table {
   border-radius: 3px;
   box-shadow: 1px 1px 3px #28261f;
   position: relative;
+}
+
+.approx_irates {
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.approx_irates td, th {
+  padding: 3px 5px 3px 5px;
+}
+
+#irate_form {
+  margin: 0 auto;
+  width: 480px;
 }
 
 /*///////////*/
@@ -75,16 +95,10 @@ table {
   bottom: -8px;
 }
 
-#irate_form {
-  margin: 0 auto;
-  width: 480px;
-}
-
 /*////////////////*/
 /* Rickshaw Graph */
 /*////////////////*/
 
-/* Center the chart */
 #chart_container {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;

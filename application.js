@@ -20,7 +20,7 @@ $(document).ready(function(){
 	$("#25twoWeeks").click(function() {
 		$('.modal').show();
 		//$('.dumbBox').css("background-color","#40E50D");
-		$('.modal_content').text('Thank you for the free interest rate');
+		$('.modal_content').text('You just earned 25% interst on your money');
 	});
 
 	$("#aDollarToday").click(function() {
@@ -33,7 +33,7 @@ $(document).ready(function(){
 		$('.modal_content').text('That doesn\'t make much sense.');
 	});
 
-	//Slide 4 & Slide 7
+	//Slide 4 & Slide 7_1
 	$("#Higher").click(function() {
 		$('.modal').show();
 		$('.modal_content').text('Correct');
